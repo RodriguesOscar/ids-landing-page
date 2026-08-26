@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Institut für Data Science (IDS) der HAW Kiel – Forschung, Lehre und Transfer rund um Daten, Machine Learning und KI.">
+<meta name="theme-color" content="#00305d">
+<title>Startseite | Institut für Data Science – HAW Kiel</title>
+<style>
+  :root {
+    --haw-blue: #00305d;
+    --haw-blue-dark: #00223f;
+    --haw-accent: #0a6ebd;
+    --haw-cyan: #00a0c8;
+    --ink: #1a1a1a;
+    --muted: #5a6672;
+    --line: #e2e6ea;
+    --bg-soft: #f4f6f8;
+    --white: #ffffff;
+    --maxw: 1180px;
+    --radius: 4px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.6;
+    background: var(--white);
+  }
+
+  a { color: var(--haw-accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* Utility bar */
+  .utilbar {
+    background: var(--haw-blue-dark);
+    color: #cdd6df;
+    font-size: 0.82rem;
+  }
+  .utilbar .wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 22px;
+    height: 38px;
+    align-items: center;
+  }
+  .utilbar a { color: #cdd6df; }
+  .utilbar a:hover { color: #fff; text-decoration: none; }
+
+  /* Header */
+  header.masthead { background: var(--white); border-bottom: 1px solid var(--line); }
+  .masthead .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 92px;
+    gap: 24px;
+  }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand .mark {
+    background: var(--haw-blue);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.35rem;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    line-height: 1;
+  }
+  .brand .name { line-height: 1.2; }
+  .brand .name strong {
+    display: block;
+    color: var(--haw-blue);
+    font-size: 1.12rem;
+    font-weight: 700;
+  }
+  .brand .name span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  nav.mainnav ul {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav.mainnav a {
+    display: block;
+    padding: 10px 14px;
+    color: var(--haw-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: var(--radius);
+  }
+  nav.mainnav a:hover { background: var(--bg-soft); text-decoration: none; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--haw-blue) 0%, var(--haw-blue-dark) 60%, #001a33 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -120px; top: -120px;
+    width: 460px; height: 460px;
+    background: radial-gradient(circle, rgba(0,160,200,0.35) 0%, rgba(0,160,200,0) 70%);
+  }
+  .hero .wrap { position: relative; z-index: 1; padding: 78px 24px 84px; }
+  .hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    color: var(--haw-cyan);
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3.1rem);
+    line-height: 1.12;
+    margin: 0 0 18px;
+    font-weight: 800;
+  }
+  .hero p {
+    max-width: 640px;
+    font-size: 1.12rem;
+    color: #dfe7ef;
+    margin: 0 0 30px;
+  }
+  .btnrow { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 0.98rem;
+  }
+  .btn-primary { background: var(--haw-cyan); color: #00223f; }
+  .btn-primary:hover { background: #33b6d8; text-decoration: none; }
+  .btn-ghost { border: 2px solid rgba(255,255,255,0.6); color: #fff; }
+  .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); text-decoration: none; }
+
+  /* Intro / greeting */
+  section { padding: 68px 0; }
+  .section-head { max-width: 760px; margin-bottom: 40px; }
+  .section-head .kicker {
+    color: var(--haw-accent);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+  .section-head h2 {
+    color: var(--haw-blue);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin: 0 0 14px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .section-head p { color: var(--muted); font-size: 1.05rem; margin: 0; }
+
+  .intro-lead {
+    border-left: 5px solid var(--haw-cyan);
+    padding-left: 22px;
+    font-size: 1.18rem;
+    color: var(--ink);
+    max-width: 820px;
+    margin: 0 0 26px;
+  }
+  .intro-body { max-width: 820px; color: #33404c; }
+
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    background: var(--bg-soft);
+  }
+  .cards-section { background: var(--bg-soft); }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--haw-blue);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .card:hover { box-shadow: 0 8px 24px rgba(0,48,93,0.10); transform: translateY(-3px); }
+  .card h3 { color: var(--haw-blue); font-size: 1.22rem; margin: 0 0 12px; }
+  .card p { color: var(--muted); margin: 0 0 16px; font-size: 0.98rem; }
+  .card a { font-weight: 700; }
+
+  /* Footer */
+  footer {
+    background: var(--haw-blue-dark);
+    color: #c4cdd6;
+    padding: 54px 0 30px;
+    font-size: 0.92rem;
+  }
+  footer .cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+  }
+  footer h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  footer a { color: #c4cdd6; }
+  footer a:hover { color: #fff; }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer ul li { margin-bottom: 8px; }
+  footer .legal {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+  footer .legal ul { display: flex; gap: 18px; flex-wrap: wrap; }
+  footer .legal ul li { margin: 0; }
+
+  @media (max-width: 900px) {
+    nav.mainnav { display: none; }
+    .cards { grid-template-columns: 1fr; }
+    footer .cols { grid-template-columns: 1fr; gap: 28px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Utility bar -->
+  <div class="utilbar">
+    <div class="wrap">
+      <a href="#">Intern</a>
+      <a href="#">Leichte Sprache</a>
+      <a href="#">EN</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="wrap">
+      <a class="brand" href="#" aria-label="Institut für Data Science – Startseite">
+        <span class="mark">IDS</span>
+        <span class="name">
+          <strong>Institut für Data Science</strong>
+          <span>HAW Kiel</span>
+        </span>
+      </a>
+      <nav class="mainnav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#institut">Institut</a></li>
+          <li><a href="#forschung">Forschung</a></li>
+          <li><a href="#transfer">Transfer</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Institut für Data Science · HAW Kiel</p>
+      <h1>Aus Daten Wissen machen.</h1>
+      <p>Willkommen am Institut für Data Science der Hochschule für Angewandte Wissenschaften Kiel. Wir verbinden Forschung und Transfer rund um Daten, Machine Learning und Künstliche Intelligenz – anwendungsnah und für den Norden.</p>
+      <div class="btnrow">
+        <a class="btn btn-primary" href="#institut">Institut kennenlernen</a>
+        <a class="btn btn-ghost" href="#kontakt">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Greeting / Intro -->
+  <section id="institut">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Herzlich willkommen</p>
+        <h2>Das Institut für Data Science</h2>
+      </div>
+      <p class="intro-lead">
+        Schön, dass Sie da sind. Das Institut für Data Science (IDS) betreibt an der HAW Kiel
+        angewandte, datengetriebene Forschung.
+      </p>
+      <div class="intro-body">
+        <p>
+          Am IDS entwickeln wir Methoden und Werkzeuge, um aus komplexen Datenbeständen belastbare
+          Erkenntnisse zu gewinnen – von der statistischen Modellierung über Machine Learning bis zu
+          modernen KI-Verfahren. In interdisziplinären Projekten arbeiten wir mit Partnern aus
+          Wirtschaft, Verwaltung und Gesellschaft in Schleswig-Holstein und darüber hinaus.
+        </p>
+        <p>
+          Unser Anspruch: Data Science nicht nur zu erforschen, sondern anzuwenden – praxisnah,
+          verantwortungsvoll und mit Blick auf die Fragen von morgen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards: Forschung / Lehre / Transfer -->
+  <section class="cards-section">
+    <div class="wrap">
+      <div class="cards">
+        <article class="card" id="forschung">
+          <h3>Forschung</h3>
+          <p>
+            Angewandte Forschung in Machine Learning, KI, Datenanalyse und datengetriebener
+            Entscheidungsunterstützung – in Kooperation mit Partnern aus der Region.
+          </p>
+          <a href="#">Mehr erfahren →</a>
+        </article>
+        <article class="card" id="transfer">
+          <h3>Transfer</h3>
+          <p>
+            Wissenstransfer in die Praxis: gemeinsame Projekte, Beratung und Kooperationen mit
+            Unternehmen und öffentlichen Einrichtungen.
+          </p>
+          <a href="#">Zusammenarbeit →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="kontakt">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Kontakt</h4>
+          <p>
+            Institut für Data Science<br>
+            HAW Kiel – Hochschule für Angewandte Wissenschaften<br>
+            Grenzstraße 3<br>
+            24149 Kiel
+          </p>
+          <p>
+            Web: <a href="https://ids-kiel.de">ids-kiel.de</a>
+          </p>
+        </div>
+        <div>
+          <h4>Institut</h4>
+          <ul>
+            <li><a href="#institut">Über uns</a></li>
+            <li><a href="#forschung">Forschung</a></li>
+            <li><a href="#transfer">Transfer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hochschule</h4>
+          <ul>
+            <li><a href="https://www.haw-kiel.de">HAW Kiel</a></li>
+            <li><a href="https://www.haw-kiel.de/fachbereiche/informatik-und-elektrotechnik/">Informatik &amp; Elektrotechnik</a></li>
+            <li><a href="https://www.haw-kiel.de/forschung-transfer/">Forschung &amp; Transfer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 Institut für Data Science · HAW Kiel</span>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">Barrierefreiheit</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
