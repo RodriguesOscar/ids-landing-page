@@ -1,0 +1,166 @@
+import type { Translation } from './types'
+
+export const en: Translation = {
+  documentTitle: 'Institute for Data Science | HAW Kiel',
+  accessibility: {
+    dataVisualizationLabel: 'Data visualisation, decorative',
+    skipToMain: 'Skip to content',
+  },
+  header: {
+    brand: {
+      mark: 'IDS',
+      name: 'Institute for Data Science',
+      subline: 'HAW Kiel',
+      homeAriaLabel: 'Institute for Data Science, home page',
+    },
+    navigationAriaLabel: 'Main navigation',
+    navigation: [
+      { label: 'Institute', to: '/about' },
+      { label: 'Projects', to: '/projects' },
+      { label: 'About us', to: '/about' },
+      { label: 'Collaboration', to: '/contact' },
+      { label: 'Contact', to: '/contact', isContact: true },
+    ],
+    language: {
+      label: 'Choose language',
+      german: 'DE',
+      english: 'EN',
+      germanAriaLabel: 'Select German',
+      englishAriaLabel: 'Select English',
+    },
+  },
+  footer: {
+    copyright: '© 2026 Institute for Data Science · HAW Kiel',
+    navigationAriaLabel: 'Legal information',
+    links: [
+      { label: 'Imprint', to: '/impressum' },
+      { label: 'Privacy policy', to: '/privacy' },
+      { label: 'Accessibility' },
+    ],
+  },
+  home: {
+    hero: {
+      eyebrow: 'Institute for Data Science · HAW Kiel',
+      titleStart: 'Turning data',
+      titleAccent: 'into knowledge',
+      titleEnd: '.',
+      description: 'Welcome to the Institute for Data Science at Kiel University of Applied Sciences. We connect research and knowledge transfer around data, machine learning and artificial intelligence – with practical relevance for northern Germany.',
+      primaryAction: 'Explore project areas',
+      secondaryAction: 'Get in touch',
+      scrollLabel: 'View projects',
+    },
+    dataCard: {
+      label: 'IDS / Project work',
+      status: 'Current',
+      metrics: [
+        { value: 'Data', label: 'analyse' },
+        { value: 'Models', label: 'test' },
+        { value: 'Results', label: 'interpret' },
+      ],
+    },
+    institute: {
+      label: 'Institute',
+      eyebrow: 'Institute for Data Science',
+      title: 'Research and knowledge transfer with data.',
+      paragraphs: [
+        'Researchers at the Institute for Data Science at HAW Kiel work on data-driven questions. The focus is on data analysis, statistical modelling, machine learning and artificial intelligence.',
+        'Projects emerge through collaboration with different departments and external partners. We connect methodological research with specific applications.',
+      ],
+    },
+    projects: {
+      eyebrow: 'Project work at IDS',
+      title: 'Our projects',
+      description: 'From the initial idea to practical use: our projects make data science tangible.',
+      linkLabel: 'More about the project →',
+      items: [
+        {
+          id: 'reakt',
+          code: '01 / REAKT',
+          title: 'Rail transport in rural areas',
+          description: 'REAKT is a transdisciplinary initiative from Schleswig-Holstein. Partners from research and industry develop solutions in research and development projects to make rail transport more individual, attractive, safe and economically viable.',
+        },
+        {
+          id: 'dpm',
+          code: '02 / DPM',
+          title: 'Digitales Besuchermanagement 2.0',
+          description: 'DPM is advancing digital visitor management in Schleswig-Holstein. The project develops approaches that make data from sensors, forecasting models and open sources useful for tourism stakeholders.',
+        },
+      ],
+    },
+    impact: {
+      visualLabel: 'Research × application × collaboration',
+      visualStatement: 'Projects emerge through dialogue.',
+      eyebrow: 'Collaboration',
+      title: 'Academic expertise for shared projects.',
+      description: 'We collaborate on projects with companies, public institutions and other academic partners. We bring data-science methods into interdisciplinary teams and develop solutions together with the relevant specialist domains.',
+      action: 'Contact our team',
+    },
+    contact: {
+      eyebrow: 'Contact',
+      titleStart: 'Questions become',
+      titleAccent: 'projects.',
+      action: 'Get in touch',
+      emailSubject: 'Contacting the Institute for Data Science',
+      address: ['Institute for Data Science', 'HAW Kiel – Kiel University of Applied Sciences', 'Grenzstraße 3', '24149 Kiel'],
+    },
+  },
+  projects: {
+    eyebrow: 'Project overview',
+    title: 'Projects',
+    description: 'Project information is being added on an ongoing basis.',
+    cards: [
+      { code: '01 / PROJECT', title: 'Project title to follow', description: 'A short project description will follow.', slug: 'projekt-platzhalter-1' },
+      { code: '02 / PROJECT', title: 'Project title to follow', description: 'A short project description will follow.', slug: 'projekt-platzhalter-2' },
+    ],
+    detailLinkLabel: 'Open project template →',
+  },
+  projectDetail: {
+    eyebrow: 'Project',
+    title: 'Project details to follow',
+    introduction: 'An introduction to the project will be added.',
+    description: 'A description, project goals and further information will be added.',
+    metadataTitle: 'Project information',
+    metadata: ['Project duration: to follow', 'Participants: to follow', 'Project status: to follow'],
+    relatedTitle: 'Further information',
+    relatedDescription: 'Links to materials and an external project page will follow.',
+    routeIdentifierLabel: 'Project identifier',
+    pendingIdentifier: 'to follow',
+    backToOverviewLabel: 'Back to project overview',
+  },
+  about: {
+    eyebrow: 'About us',
+    title: 'Institute for Data Science',
+    introduction: 'Information about the institute will follow.',
+    sections: [
+      { title: 'Profile', description: 'A profile of the institute will be added.' },
+      { title: 'Team', description: 'Information about the people involved will follow.' },
+    ],
+  },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Get in touch',
+    introduction: 'Contact information and guidance will be added.',
+    formTitle: 'Prepare a message',
+    nameLabel: 'Name',
+    emailLabel: 'Email address',
+    messageLabel: 'Message',
+    submissionNote: 'Sending will be added at a later stage.',
+    submitLabel: 'Sending to follow',
+    detailsTitle: 'Contact information',
+    detailsDescription: 'Contact people, address details and further ways to get in touch will follow.',
+  },
+  legal: {
+    impressum: {
+      eyebrow: 'Legal information',
+      title: 'Imprint',
+      introduction: 'The legal information will be added.',
+      sections: [{ title: 'Information required by law', description: 'Responsible-party details will follow.' }],
+    },
+    privacy: {
+      eyebrow: 'Legal information',
+      title: 'Privacy policy',
+      introduction: 'Privacy information will be added.',
+      sections: [{ title: 'Privacy information', description: 'The complete information will follow.' }],
+    },
+  },
+}
