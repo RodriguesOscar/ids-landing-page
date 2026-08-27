@@ -1,7 +1,7 @@
 import type { Translation } from './types'
 
 export const en: Translation = {
-  documentTitle: 'Institute for Data Science | HAW Kiel',
+  documentTitle: 'Institut für Data Science - HAW Kiel',
   accessibility: {
     dataVisualizationLabel: 'Data visualisation, decorative',
     skipToMain: 'Skip to content',
@@ -15,10 +15,9 @@ export const en: Translation = {
     },
     navigationAriaLabel: 'Main navigation',
     navigation: [
-      { label: 'Institute', to: '/about' },
-      { label: 'Projects', to: '/projects' },
-      { label: 'About us', to: '/about' },
-      { label: 'Collaboration', to: '/contact' },
+      { label: 'Institute', to: '/#institut' },
+      { label: 'Projects', to: '/#projekte' },
+      { label: 'Collaboration', to: '/#zusammenarbeit' },
       { label: 'Contact', to: '/contact', isContact: true },
     ],
     language: {
@@ -35,7 +34,6 @@ export const en: Translation = {
     links: [
       { label: 'Imprint', to: '/impressum' },
       { label: 'Privacy policy', to: '/privacy' },
-      { label: 'Accessibility' },
     ],
   },
   home: {
@@ -44,6 +42,7 @@ export const en: Translation = {
       titleStart: 'Turning data',
       titleAccent: 'into knowledge',
       titleEnd: '.',
+      titleSeparator: '',
       description: 'Welcome to the Institute for Data Science at Kiel University of Applied Sciences. We connect research and knowledge transfer around data, machine learning and artificial intelligence – with practical relevance for northern Germany.',
       primaryAction: 'Explore project areas',
       secondaryAction: 'Get in touch',
@@ -71,19 +70,29 @@ export const en: Translation = {
       eyebrow: 'Project work at IDS',
       title: 'Our projects',
       description: 'From the initial idea to practical use: our projects make data science tangible.',
-      linkLabel: 'More about the project →',
+      externalLinkAriaLabelPrefix: 'More information about ',
+      externalLinkAriaLabelSuffix: ' (opens in a new tab)',
       items: [
         {
           id: 'reakt',
           code: '01 / REAKT',
           title: 'Rail transport in rural areas',
           description: 'REAKT is a transdisciplinary initiative from Schleswig-Holstein. Partners from research and industry develop solutions in research and development projects to make rail transport more individual, attractive, safe and economically viable.',
+          linkLabel: 'More about the project →',
         },
         {
           id: 'dpm',
           code: '02 / DPM',
           title: 'Digitales Besuchermanagement 2.0',
           description: 'DPM is advancing digital visitor management in Schleswig-Holstein. The project develops approaches that make data from sensors, forecasting models and open sources useful for tourism stakeholders.',
+          linkLabel: 'More about the project →',
+        },
+        {
+          id: 'kiLabor',
+          code: '03 / KI-LABOR',
+          title: 'HAW Kiel AI Lab',
+          description: 'The AI Lab combines training, feasibility studies and practical AI projects with HAW Kiel, particularly for small and medium-sized enterprises.',
+          linkLabel: 'Learn more about the AI Lab →',
         },
       ],
     },
@@ -100,7 +109,6 @@ export const en: Translation = {
       titleStart: 'Questions become',
       titleAccent: 'projects.',
       action: 'Get in touch',
-      emailSubject: 'Contacting the Institute for Data Science',
       address: ['Institute for Data Science', 'HAW Kiel – Kiel University of Applied Sciences', 'Grenzstraße 3', '24149 Kiel'],
     },
   },
@@ -153,14 +161,69 @@ export const en: Translation = {
     impressum: {
       eyebrow: 'Legal information',
       title: 'Imprint',
-      introduction: 'The legal information will be added.',
-      sections: [{ title: 'Information required by law', description: 'Responsible-party details will follow.' }],
+      introduction: 'The following information must be completed and legally reviewed before publication.',
+      sections: [
+        {
+          title: 'Responsible organisation',
+          paragraphs: [
+            { before: 'This website is operated by ', placeholder: '[name of the responsible organisation]', after: '.' },
+            { before: 'Represented by ', placeholder: '[name and role of the authorised representative]', after: '.' },
+          ],
+        },
+        {
+          title: 'Address and contact details',
+          paragraphs: [
+            { before: 'Postal address: ', placeholder: '[street, number, postcode and city]', after: '.' },
+            { before: 'Email: ', placeholder: '[contact email address]', after: '.' },
+            { before: 'Telephone: ', placeholder: '[telephone number]', after: '.' },
+          ],
+        },
+        {
+          title: 'Further legal information',
+          paragraphs: [
+            { before: 'Legal form, register details and VAT identification number: ', placeholder: '[add where applicable]', after: '.' },
+            { before: 'Responsible for editorial content: ', placeholder: '[name and postal address]', after: '.' },
+          ],
+        },
+      ],
     },
     privacy: {
       eyebrow: 'Legal information',
       title: 'Privacy policy',
-      introduction: 'Privacy information will be added.',
-      sections: [{ title: 'Privacy information', description: 'The complete information will follow.' }],
+      introduction: 'This page is a general template. It must be adapted to the actual data processing and legally reviewed before publication.',
+      sections: [
+        {
+          title: 'Responsible organisation',
+          paragraphs: [
+            { before: 'The organisation responsible for processing personal data is ', placeholder: '[name and address of the responsible organisation]', after: '.' },
+            { before: 'Privacy contact: ', placeholder: '[email address or contact details]', after: '.' },
+          ],
+        },
+        {
+          title: 'Processing when visiting this website',
+          paragraphs: [
+            { before: 'Describe which personal data is processed when the website is accessed, for which purpose and on which legal basis: ', placeholder: '[add the specific processing activities]', after: '.' },
+            { before: 'Storage periods and recipient categories: ', placeholder: '[add the specific details]', after: '.' },
+          ],
+        },
+        {
+          title: 'Hosting, cookies and external services',
+          paragraphs: [
+            { before: 'Hosting provider and processing location: ', placeholder: '[add provider, location and contractual basis]', after: '.' },
+            { before: 'Information about cookies, analytics tools or integrated external services: ', placeholder: '[add only services that are actually used]', after: '.' },
+          ],
+        },
+        {
+          title: 'Your rights',
+          paragraphs: [
+            { before: 'Where the legal requirements are met, data subjects have rights including access, rectification, erasure, restriction of processing and objection. Responsible supervisory authority: ', placeholder: '[name and contact details of the responsible supervisory authority]', after: '.' },
+          ],
+        },
+        {
+          title: 'Last updated',
+          paragraphs: [{ before: 'Date of this privacy information: ', placeholder: '[DD.MM.YYYY]', after: '.' }],
+        },
+      ],
     },
   },
 }

@@ -7,11 +7,12 @@ export type ProjectCardData = {
 } & ({ href: string } | { to: string })
 
 type ProjectCardProps = {
+  externalLinkAriaLabel?: string
   linkLabel: string
   project: ProjectCardData
 }
 
-export function ProjectCard({ linkLabel, project }: ProjectCardProps) {
+export function ProjectCard({ externalLinkAriaLabel, linkLabel, project }: ProjectCardProps) {
   return (
     <article className="project-card">
       <span className="project-card-code">{project.code}</span>
@@ -20,7 +21,13 @@ export function ProjectCard({ linkLabel, project }: ProjectCardProps) {
       {'to' in project ? (
         <Link className="project-card-link" to={project.to}>{linkLabel}</Link>
       ) : (
-        <a className="project-card-link" href={project.href} target="_blank" rel="noreferrer">
+        <a
+          className="project-card-link"
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={externalLinkAriaLabel}
+        >
           {linkLabel}
         </a>
       )}

@@ -18,7 +18,13 @@ export function LegalPage({ pageKey }: LegalPageProps) {
           {sections.map((section) => (
             <article key={section.title}>
               <h2>{section.title}</h2>
-              <p>{section.description}</p>
+              {section.paragraphs.map((paragraph, index) => (
+                <p key={`${section.title}-${index}`}>
+                  {paragraph.before}
+                  {paragraph.placeholder && <strong>{paragraph.placeholder}</strong>}
+                  {paragraph.after}
+                </p>
+              ))}
             </article>
           ))}
         </div>

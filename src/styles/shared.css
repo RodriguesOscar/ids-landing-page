@@ -19,10 +19,12 @@
 .project-card:hover .project-card-code, .project-card:hover .project-card-link { color: var(--cyan); }
 .project-card:hover p { color: var(--hero-muted); }
 .project-card-link { display: inline-block; margin-top: 28px; color: var(--accent); font-weight: 800; font-size: .82rem; }
+.project-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
 @media (max-width: 760px) {
   .shell { width: min(100% - 36px, var(--max)); }
   .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 225px; }
   .project-card h3 { margin-top: 35px; }
+  .project-card:last-child:nth-child(odd) { grid-column: auto; }
 }

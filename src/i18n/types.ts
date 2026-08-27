@@ -14,7 +14,8 @@ export type FooterItem = {
 type ProjectCardCopy = {
   code: string
   description: string
-  id: 'reakt' | 'dpm'
+  id: 'reakt' | 'dpm' | 'kiLabor'
+  linkLabel: string
   title: string
 }
 
@@ -29,7 +30,11 @@ type LegalPageCopy = {
   eyebrow: string
   introduction: string
   sections: readonly {
-    description: string
+    paragraphs: readonly {
+      after?: string
+      before?: string
+      placeholder?: string
+    }[]
     title: string
   }[]
   title: string
@@ -89,7 +94,6 @@ export type Translation = {
     contact: {
       action: string
       address: readonly string[]
-      emailSubject: string
       eyebrow: string
       titleAccent: string
       titleStart: string
@@ -110,6 +114,7 @@ export type Translation = {
       secondaryAction: string
       titleAccent: string
       titleEnd: string
+      titleSeparator: string
       titleStart: string
     }
     impact: {
@@ -129,8 +134,9 @@ export type Translation = {
     projects: {
       description: string
       eyebrow: string
+      externalLinkAriaLabelPrefix: string
+      externalLinkAriaLabelSuffix: string
       items: readonly ProjectCardCopy[]
-      linkLabel: string
       title: string
     }
   }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ButtonLink } from '../components/ButtonLink'
 import { ProjectCard } from '../components/ProjectCard'
 import { homeProjectLinks } from '../content/projectLinks'
@@ -9,7 +10,6 @@ const signalBars = Array.from({ length: 17 }, (_, index) => index)
 export function HomePage() {
   const { translation } = useLanguage()
   const { hero, dataCard, institute, projects, impact, contact } = translation.home
-  const contactHref = `mailto:info@haw-kiel.de?subject=${encodeURIComponent(contact.emailSubject)}`
 
   return (
     <div className="home-page">
@@ -23,14 +23,14 @@ export function HomePage() {
               <h1 id="hero-title">
                 {hero.titleStart}
                 <br />
-                <span className="accent">{hero.titleAccent}</span> {hero.titleEnd}
+                <span className="accent">{hero.titleAccent}</span>{hero.titleSeparator}{hero.titleEnd}
               </h1>
               <p className="hero-copy">{hero.description}</p>
               <div className="actions">
-                <ButtonLink href="#themen" variant="primary">
+                <ButtonLink href="#projekte" variant="primary">
                   {hero.primaryAction}
                 </ButtonLink>
-                <ButtonLink href="#kontakt" variant="secondary">
+                <ButtonLink to="/contact" variant="secondary">
                   {hero.secondaryAction}
                 </ButtonLink>
               </div>
@@ -71,7 +71,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="areas" id="themen">
+        <section className="areas" id="projekte">
           <div className="shell">
             <div className="section-heading">
               <div>
@@ -84,7 +84,8 @@ export function HomePage() {
               {projects.items.map((project) => (
                 <ProjectCard
                   key={project.code}
-                  linkLabel={projects.linkLabel}
+                  linkLabel={project.linkLabel}
+                  externalLinkAriaLabel={`${projects.externalLinkAriaLabelPrefix}${project.title}${projects.externalLinkAriaLabelSuffix}`}
                   project={{ ...project, href: homeProjectLinks[project.id] }}
                 />
               ))}
@@ -92,7 +93,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="impact" id="transfer">
+        <section className="impact" id="zusammenarbeit">
           <div className="shell impact-wrap">
             <div className="impact-visual">
               <p>{impact.visualLabel}</p>
@@ -102,9 +103,9 @@ export function HomePage() {
               <p className="eyebrow dark">{impact.eyebrow}</p>
               <h2>{impact.title}</h2>
               <p>{impact.description}</p>
-              <a className="text-link" href="#kontakt">
+              <Link className="text-link" to="/contact">
                 {impact.action}
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -119,7 +120,7 @@ export function HomePage() {
                 <em>{contact.titleAccent}</em>
               </h2>
               <div className="actions">
-                <ButtonLink href={contactHref} variant="primary">
+                <ButtonLink to="/contact" variant="primary">
                   {contact.action}
                 </ButtonLink>
               </div>

@@ -1,7 +1,7 @@
 import type { Translation } from './types'
 
 export const de: Translation = {
-  documentTitle: 'Institut für Data Science | HAW Kiel',
+  documentTitle: 'Institut für Data Science - HAW Kiel',
   accessibility: {
     dataVisualizationLabel: 'Datenvisualisierung als dekoratives Element',
     skipToMain: 'Zum Inhalt springen',
@@ -15,10 +15,9 @@ export const de: Translation = {
     },
     navigationAriaLabel: 'Hauptnavigation',
     navigation: [
-      { label: 'Institut', to: '/about' },
-      { label: 'Projekte', to: '/projects' },
-      { label: 'Über uns', to: '/about' },
-      { label: 'Zusammenarbeit', to: '/contact' },
+      { label: 'Institut', to: '/#institut' },
+      { label: 'Projekte', to: '/#projekte' },
+      { label: 'Zusammenarbeit', to: '/#zusammenarbeit' },
       { label: 'Kontakt', to: '/contact', isContact: true },
     ],
     language: {
@@ -35,7 +34,6 @@ export const de: Translation = {
     links: [
       { label: 'Impressum', to: '/impressum' },
       { label: 'Datenschutz', to: '/privacy' },
-      { label: 'Barrierefreiheit' },
     ],
   },
   home: {
@@ -44,6 +42,7 @@ export const de: Translation = {
       titleStart: 'Aus Daten',
       titleAccent: 'Wissen',
       titleEnd: 'machen.',
+      titleSeparator: ' ',
       description: 'Willkommen am Institut für Data Science der Hochschule für Angewandte Wissenschaften Kiel. Wir verbinden Forschung und Transfer rund um Daten, Machine Learning und Künstliche Intelligenz – anwendungsnah und für den Norden.',
       primaryAction: 'Projektfelder ansehen',
       secondaryAction: 'Kontakt aufnehmen',
@@ -71,19 +70,29 @@ export const de: Translation = {
       eyebrow: 'Projektarbeit am IDS',
       title: 'Unsere Projekte',
       description: 'Von der ersten Idee bis zur Anwendung: Unsere Projekte machen Data Science konkret.',
-      linkLabel: 'Mehr zum Projekt →',
+      externalLinkAriaLabelPrefix: 'Weitere Informationen zu ',
+      externalLinkAriaLabelSuffix: ' (öffnet in einem neuen Tab)',
       items: [
         {
           id: 'reakt',
           code: '01 / REAKT',
           title: 'Schienenverkehr im ländlichen Raum',
           description: 'REAKT ist eine transdisziplinäre Initiative aus Schleswig-Holstein. Partner aus Wissenschaft und Wirtschaft entwickeln in FuE-Projekten Lösungen, um Schienenverkehr individueller, attraktiver, sicherer und wirtschaftlicher zu gestalten.',
+          linkLabel: 'Mehr zum Projekt →',
         },
         {
           id: 'dpm',
           code: '02 / DPM',
           title: 'Digitales Besuchermanagement 2.0',
           description: 'DPM entwickelt digitales Besuchermanagement in Schleswig-Holstein weiter. Im Projekt entstehen unter anderem Ansätze, um Daten aus Sensorik, Prognosemodellen und offenen Quellen für touristische Akteure nutzbar zu machen.',
+          linkLabel: 'Mehr zum Projekt →',
+        },
+        {
+          id: 'kiLabor',
+          code: '03 / KI-LABOR',
+          title: 'KI-Labor der HAW Kiel',
+          description: 'Das KI-Labor verbindet Weiterbildung, Machbarkeitsstudien und praxisnahe KI-Projekte mit der HAW Kiel – insbesondere für kleine und mittlere Unternehmen.',
+          linkLabel: 'Mehr zum KI-Labor →',
         },
       ],
     },
@@ -100,7 +109,6 @@ export const de: Translation = {
       titleStart: 'Aus Fragen werden',
       titleAccent: 'Projekte.',
       action: 'Kontakt aufnehmen',
-      emailSubject: 'Kontaktaufnahme mit dem Institut für Data Science',
       address: ['Institut für Data Science', 'HAW Kiel – Hochschule für Angewandte Wissenschaften', 'Grenzstraße 3', '24149 Kiel'],
     },
   },
@@ -153,14 +161,69 @@ export const de: Translation = {
     impressum: {
       eyebrow: 'Rechtliches',
       title: 'Impressum',
-      introduction: 'Die rechtlichen Angaben werden ergänzt.',
-      sections: [{ title: 'Angaben gemäß rechtlicher Vorgaben', description: 'Verantwortliche Angaben folgen.' }],
+      introduction: 'Die folgenden Angaben müssen vor der Veröffentlichung ergänzt und rechtlich geprüft werden.',
+      sections: [
+        {
+          title: 'Verantwortliche Stelle',
+          paragraphs: [
+            { before: 'Verantwortlich für diese Website ist ', placeholder: '[Name der verantwortlichen Stelle]', after: '.' },
+            { before: 'Vertreten durch ', placeholder: '[Name und Funktion der vertretungsberechtigten Person]', after: '.' },
+          ],
+        },
+        {
+          title: 'Anschrift und Kontakt',
+          paragraphs: [
+            { before: 'Postanschrift: ', placeholder: '[Straße, Hausnummer, PLZ und Ort]', after: '.' },
+            { before: 'E-Mail: ', placeholder: '[Kontakt-E-Mail-Adresse]', after: '.' },
+            { before: 'Telefon: ', placeholder: '[Telefonnummer]', after: '.' },
+          ],
+        },
+        {
+          title: 'Weitere rechtliche Angaben',
+          paragraphs: [
+            { before: 'Rechtsform, Registerangaben und Umsatzsteuer-Identifikationsnummer: ', placeholder: '[falls zutreffend ergänzen]', after: '.' },
+            { before: 'Inhaltlich verantwortlich: ', placeholder: '[Name und postalische Anschrift]', after: '.' },
+          ],
+        },
+      ],
     },
     privacy: {
       eyebrow: 'Rechtliches',
       title: 'Datenschutz',
-      introduction: 'Die Datenschutzhinweise werden ergänzt.',
-      sections: [{ title: 'Datenschutzhinweise', description: 'Die vollständigen Informationen folgen.' }],
+      introduction: 'Diese Seite ist eine allgemeine Vorlage und muss vor der Veröffentlichung an die tatsächliche Datenverarbeitung angepasst und rechtlich geprüft werden.',
+      sections: [
+        {
+          title: 'Verantwortliche Stelle',
+          paragraphs: [
+            { before: 'Verantwortlich für die Datenverarbeitung ist ', placeholder: '[Name und Anschrift der verantwortlichen Stelle]', after: '.' },
+            { before: 'Datenschutzkontakt: ', placeholder: '[E-Mail-Adresse oder Kontaktdaten]', after: '.' },
+          ],
+        },
+        {
+          title: 'Verarbeitung beim Besuch dieser Website',
+          paragraphs: [
+            { before: 'Beschreiben Sie hier, welche personenbezogenen Daten beim Aufruf der Website verarbeitet werden, zu welchem Zweck und auf welcher Rechtsgrundlage: ', placeholder: '[konkrete Verarbeitungstätigkeiten ergänzen]', after: '.' },
+            { before: 'Speicherdauer und Empfängerkategorien: ', placeholder: '[konkrete Angaben ergänzen]', after: '.' },
+          ],
+        },
+        {
+          title: 'Hosting, Cookies und externe Dienste',
+          paragraphs: [
+            { before: 'Hosting-Anbieter und Ort der Verarbeitung: ', placeholder: '[Anbieter, Sitz und vertragliche Grundlage ergänzen]', after: '.' },
+            { before: 'Informationen zu Cookies, Analysewerkzeugen oder eingebundenen externen Diensten: ', placeholder: '[nur tatsächlich verwendete Dienste ergänzen]', after: '.' },
+          ],
+        },
+        {
+          title: 'Ihre Rechte',
+          paragraphs: [
+            { before: 'Betroffene Personen haben – soweit die gesetzlichen Voraussetzungen vorliegen – insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Zuständige Aufsichtsbehörde: ', placeholder: '[Name und Kontakt der zuständigen Aufsichtsbehörde]', after: '.' },
+          ],
+        },
+        {
+          title: 'Stand',
+          paragraphs: [{ before: 'Stand dieser Datenschutzhinweise: ', placeholder: '[TT.MM.JJJJ]', after: '.' }],
+        },
+      ],
     },
   },
 }
