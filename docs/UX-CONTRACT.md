@@ -70,9 +70,9 @@ Every interactive element must also have an intentional active/pressed state com
 - Footer contents stack with legal links below the copyright line.
 - Maintain the 18px mobile page gutter and the focus ring’s visible clearance.
 
-### Unresolved mobile navigation requirement
+### Mobile navigation
 
-The reference hides desktop nav links but supplies no replacement menu trigger/drawer. Do not silently invent a menu design. Before implementation, verify whether mobile users should receive: (a) a menu control exposing the same anchors, or (b) an intentionally reduced one-page navigation model. In either case, all primary destinations must remain discoverable and keyboard accessible.
+At widths up to 980px, replace the desktop navigation list with a compact in-header menu control. It exposes the same native links as desktop navigation, announces expanded/collapsed state, closes on Escape and after navigation or language selection, and returns focus to the control after Escape. It is a disclosure, not a modal: do not trap focus.
 
 ## Reusable interaction patterns
 
@@ -98,6 +98,10 @@ The reference hides desktop nav links but supplies no replacement menu trigger/d
 - Verify the German text’s inclusive language is not split, clipped, or improperly hyphenated at narrow widths and 200% zoom.
 - Give every image an intentional alt decision. The supplied data-card visualization is decorative; real future research imagery needs informative alt text when it contributes content.
 - Preserve enough target size and spacing for touch interaction; the 52px CTAs already meet a robust baseline.
+
+## Public accessibility readiness
+
+Do not publish an accessibility statement, feedback destination, legal applicability claim, Easy German material, or German Sign Language material until the responsible authority has supplied and approved it. Before publishing, confirm the responsible jurisdiction for HAW Kiel and obtain approved statement facts, assessment date and method, known barriers, update date, feedback contact, enforcement information, and required alternative-language resources. A frontend implementation may provide accessible routes and links only after those inputs exist; it must not substitute placeholder content or claim BITV/EN conformance.
 
 ## Consistency rules for future pages
 

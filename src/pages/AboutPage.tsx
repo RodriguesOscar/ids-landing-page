@@ -6,7 +6,7 @@ export function AboutPage() {
   const about = translation.about
 
   return (
-    <main className="page-template" id="main-content">
+    <main className="page-template" id="main-content" tabIndex={-1}>
       <PageHeader eyebrow={about.eyebrow} title={about.title} description={about.introduction} />
       <section className="template-section template-section-white">
         <div className="shell template-panel-grid">

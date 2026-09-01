@@ -16,11 +16,12 @@
 .project-card-code { display: block; padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
 .project-card h3 { margin: 26px 0 14px; color: var(--haw-blue); font-family: Bitter, serif; font-size: clamp(1.45rem, 2.2vw, 1.8rem); font-weight: 500; line-height: 1.13; }
 .project-card p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
-.project-card-link { align-self: flex-start; margin-top: auto; padding-top: 24px; color: var(--haw-blue); font-weight: 700; }
+.project-card-link { display: inline-flex; align-items: center; align-self: flex-start; min-height: 44px; margin-top: auto; padding-top: 24px; color: var(--haw-blue); font-weight: 700; }
 .project-card-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .project-card:focus-within { background: var(--haw-blue); box-shadow: 0 8px 20px rgb(0 48 93 / 22%); }
 .project-card:focus-within .project-card-code { border-bottom-color: var(--haw-light-blue); color: var(--haw-light-blue); }
 .project-card:focus-within h3, .project-card:focus-within p, .project-card:focus-within .project-card-link { color: var(--white); }
+.project-card:focus-within .project-card-link:focus-visible { outline-color: var(--haw-light-blue); }
 
 @media (hover: hover) {
   .project-card:hover { background: var(--haw-blue); box-shadow: 0 8px 20px rgb(0 48 93 / 22%); }

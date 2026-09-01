@@ -14,6 +14,12 @@ export const en: Translation = {
     },
     navigationAriaLabel: 'Main navigation',
     externalLinkAriaLabelSuffix: ' (opens in a new tab)',
+    menu: {
+      openLabel: 'Menu',
+      closeLabel: 'Close',
+      openAriaLabel: 'Open navigation',
+      closeAriaLabel: 'Close navigation',
+    },
     navigation: [
       { label: 'Institute', to: '/#institut' },
       { label: 'Projects', to: '/#projekte' },

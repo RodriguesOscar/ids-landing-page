@@ -12,8 +12,8 @@ export function HomePage() {
 
   return (
     <div className="home-page">
-      <main id="main-content">
-        <section className="hero" id="start" aria-labelledby="hero-title">
+      <main id="main-content" tabIndex={-1}>
+        <section className="hero" id="start" aria-labelledby="hero-title" tabIndex={-1}>
           <div className="hero-grid shell">
             <div>
               <p className="eyebrow">{hero.eyebrow}</p>
@@ -32,7 +32,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section id="institut">
+        <section id="institut" tabIndex={-1}>
           <div className="shell intro">
             <div className="section-label">{institute.label}</div>
             <div className="intro-text">
@@ -45,7 +45,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="areas" id="projekte">
+        <section className="areas" id="projekte" tabIndex={-1}>
           <div className="shell">
             <div className="section-heading">
               <div>
@@ -67,7 +67,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="impact" id="zusammenarbeit">
+        <section className="impact" id="zusammenarbeit" tabIndex={-1}>
           <div className="shell impact-wrap">
             <figure className="impact-image">
               <img src={collaborationWorkshopImage} alt={impact.imageAlt} />
@@ -89,7 +89,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="contact" id="kontakt">
+        <section className="contact" id="kontakt" tabIndex={-1}>
           <div className="shell contact-box">
             <div>
               <p className="eyebrow">{contact.eyebrow}</p>

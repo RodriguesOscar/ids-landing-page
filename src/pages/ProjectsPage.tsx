@@ -7,7 +7,7 @@ export function ProjectsPage() {
   const { cards, description, detailLinkLabel, eyebrow, title } = translation.projects
 
   return (
-    <main className="page-template" id="main-content">
+    <main className="page-template" id="main-content" tabIndex={-1}>
       <PageHeader eyebrow={eyebrow} title={title} description={description} />
       <section className="template-section template-section-paper" aria-label={title}>
         <div className="shell">

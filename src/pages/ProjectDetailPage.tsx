@@ -8,7 +8,7 @@ export function ProjectDetailPage() {
   const project = translation.projectDetail
 
   return (
-    <main className="page-template" id="main-content">
+    <main className="page-template" id="main-content" tabIndex={-1}>
       <PageHeader eyebrow={project.eyebrow} title={project.title} description={project.introduction} />
       <section className="template-section template-section-white">
         <div className="shell detail-layout">

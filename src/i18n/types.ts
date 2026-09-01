@@ -81,6 +81,12 @@ export type Translation = {
       germanAriaLabel: string
       label: string
     }
+    menu: {
+      closeAriaLabel: string
+      closeLabel: string
+      openAriaLabel: string
+      openLabel: string
+    }
     navigation: readonly NavigationItem[]
     navigationAriaLabel: string
   }

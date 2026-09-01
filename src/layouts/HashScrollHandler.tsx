@@ -9,7 +9,9 @@ export function HashScrollHandler() {
       return
     }
 
-    document.getElementById(hash.slice(1))?.scrollIntoView()
+    const target = document.getElementById(hash.slice(1))
+    target?.scrollIntoView({ block: 'start' })
+    target?.focus({ preventScroll: true })
   }, [hash])
 
   return null

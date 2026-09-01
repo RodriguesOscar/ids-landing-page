@@ -11,7 +11,7 @@ export function LegalPage({ pageKey }: LegalPageProps) {
   const { eyebrow, introduction, sections, title } = translation.legal[pageKey]
 
   return (
-    <main className="page-template" id="main-content">
+    <main className="page-template" id="main-content" tabIndex={-1}>
       <PageHeader eyebrow={eyebrow} title={title} description={introduction} />
       <section className="template-section template-section-white">
         <div className="shell legal-content">
