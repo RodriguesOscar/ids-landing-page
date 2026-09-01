@@ -60,6 +60,18 @@ conformance.
 - Do not treat an accessibility overlay or widget as a substitute for accessible implementation, and
   do not add an accessibility toolbar unless an applicable authoritative requirement calls for it.
 
+## React-Specific Considerations
+
+- Preserve native semantics in JSX: use real `button`, `a`, `label`, and form elements, including
+  `htmlFor` and `aria-*` attributes where they express a needed relationship or state.
+- Use React `useId` for label, description, and error-message relationships. Do not derive those
+  identifiers from list indices or create a new identifier during every render.
+- Move focus only after the relevant UI has been committed, using a ref and an effect. Capture the
+  element that opened a modal or transient surface before it opens so focus can be restored on close.
+- Reusable interactive components must forward their ref, accessible props, and event handlers; do
+  not let a styling wrapper discard a consumer-provided accessible name, description, or keyboard
+  behavior.
+
 ## Finding Format
 
 For each review finding include impact, source/criterion, exact location, evidence, smallest
