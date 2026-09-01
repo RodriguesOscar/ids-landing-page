@@ -17,7 +17,7 @@ This contract defines the durable behavior of the public IDS landing site. `desi
 ### Navigation behavior
 
 - The brand lockup links to the page start (`#start`) and has the accessible name “Institut für Data Science, Startseite.”
-- Primary navigation links are same-page anchors: Institut/Über uns → `#institut`, Projekte → `#themen`, Zusammenarbeit → `#transfer`, Kontakt → `#kontakt`. Smooth scrolling is expected in the reference.
+- Primary navigation links are same-page anchors: Institut/Über uns → `#institut`, Projekte → `#themen`, Zusammenarbeit → `#transfer`. The Kontakt action opens the official HAW Kiel profile of Prof. Dr.-Ing. Michael Prange in a new tab. Smooth scrolling is expected for same-page anchors.
 - Use native anchors for destinations, never clickable non-semantic containers. Keep semantic `nav` landmarks and their German `aria-label`s.
 - The header overlays the hero and is not specified as sticky. Do not make it sticky or alter scroll ownership without a later explicit decision.
 - Anchor targets must account for the absolute header so focused/targeted section headings are not hidden behind it.
@@ -27,7 +27,7 @@ This contract defines the durable behavior of the public IDS landing site. `desi
 
 - Internal anchors stay in the same tab and retain the page context.
 - External project links open a new tab/window as in the reference and use safe `rel="noreferrer"`; the visible or accessible name should indicate that a new destination opens when implemented.
-- The contact CTA is a `mailto:` link and preserves its prefilled subject unless contact policy changes.
+- Contact triggers open the official HAW Kiel profile of Prof. Dr.-Ing. Michael Prange in a new tab, using safe `rel="noreferrer"` and a localised accessible name that announces the new destination. The manager profile provides the telephone number and email address; this site does not provide a contact form.
 - Decorative data panels and scroll notes do not become links or controls.
 
 ### Language switch behavior
@@ -53,7 +53,7 @@ Every interactive element must also have an intentional active/pressed state com
 
 ### Keyboard and focus accessibility
 
-- All navigation, language, project, legal, and mail destinations are reachable and operable with Tab/Shift+Tab and Enter using native link behavior.
+- All navigation, language, project, legal, and manager-profile destinations are reachable and operable with Tab/Shift+Tab and Enter using native link behavior.
 - `:focus-visible` must stay visible at every viewport size and cannot be hidden by the hero overflow or header positioning.
 - The page needs one logical top-to-bottom tab order: brand → primary nav → language switch → hero actions → content links → contact action → footer links.
 - Decorative grid, auroras, bars, circles, and status treatment are excluded from the tab order and hidden from assistive technology unless they receive a truthful equivalent text alternative.
@@ -88,7 +88,7 @@ The reference hides desktop nav links but supplies no replacement menu trigger/d
 
 - New editorial sections may combine an in-page anchor, eyebrow, heading, supporting copy, and one optional CTA, using the visual pattern defined in `DESIGN.md`.
 - External-project cards can vary in title, description, and link count, but each link must state its destination and new-tab behavior consistently.
-- Contact routes may use mail, phone, or a contact form only when product owners define the privacy, validation, failure, and confirmation behavior.
+- This site has no contact route or form. Contact triggers use the published manager profile; future contact routes or forms require a product decision covering privacy, validation, failure, and confirmation behavior.
 
 ## Accessibility requirements
 
@@ -104,7 +104,7 @@ The reference hides desktop nav links but supplies no replacement menu trigger/d
 1. Use the existing page shell, content hierarchy, and dark/light section alternation before creating any new layout primitive.
 2. Keep navigation and language behavior consistent across every public page; a locale switch cannot become a decorative toggle on one route.
 3. Keep links as links and actions as buttons. Do not simulate either with `div`, `span`, or a card-level click handler.
-4. Keep contact outcomes truthful: mail opens the user’s mail client; external projects open their stated external destination; legal links open published legal pages.
+4. Keep contact outcomes truthful: contact triggers open the published manager profile; external projects open their stated external destination; legal links open published legal pages.
 5. Any new asynchronous or form behavior must define pending, success, error, focus recovery, and reduced-motion behavior before implementation. This reference provides no canonical pattern for those states.
 
 ## Verification expectations before React implementation

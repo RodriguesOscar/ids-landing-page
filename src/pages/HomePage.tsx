@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import { ButtonLink } from '../components/ButtonLink'
+import { managerProfileUrl } from '../content/managerProfile'
 import { ProjectCard } from '../components/ProjectCard'
 import { homeProjectLinks } from '../content/projectLinks'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -30,7 +30,7 @@ export function HomePage() {
                 <ButtonLink href="#projekte" variant="primary">
                   {hero.primaryAction}
                 </ButtonLink>
-                <ButtonLink to="/contact" variant="secondary">
+                <ButtonLink ariaLabel={contact.externalLinkAriaLabel} external href={managerProfileUrl} variant="secondary">
                   {hero.secondaryAction}
                 </ButtonLink>
               </div>
@@ -103,9 +103,15 @@ export function HomePage() {
               <p className="eyebrow dark">{impact.eyebrow}</p>
               <h2>{impact.title}</h2>
               <p>{impact.description}</p>
-              <Link className="text-link" to="/contact">
+              <a
+                aria-label={contact.externalLinkAriaLabel}
+                className="text-link"
+                href={managerProfileUrl}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {impact.action}
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -120,13 +126,13 @@ export function HomePage() {
                 <em>{contact.titleAccent}</em>
               </h2>
               <div className="actions">
-                <ButtonLink to="/contact" variant="primary">
+                <ButtonLink ariaLabel={contact.externalLinkAriaLabel} external href={managerProfileUrl} variant="primary">
                   {contact.action}
                 </ButtonLink>
               </div>
             </div>
             <aside>
-              {contact.address.map((line) => (
+              {contact.details.map((line) => (
                 <span key={line}>
                   {line}
                   <br />

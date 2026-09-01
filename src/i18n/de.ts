@@ -1,3 +1,4 @@
+import { managerProfileUrl } from '../content/managerProfile'
 import type { Translation } from './types'
 
 export const de: Translation = {
@@ -14,11 +15,12 @@ export const de: Translation = {
       homeAriaLabel: 'Institut für Data Science, Startseite',
     },
     navigationAriaLabel: 'Hauptnavigation',
+    externalLinkAriaLabelSuffix: ' (öffnet in einem neuen Tab)',
     navigation: [
       { label: 'Institut', to: '/#institut' },
       { label: 'Projekte', to: '/#projekte' },
       { label: 'Zusammenarbeit', to: '/#zusammenarbeit' },
-      { label: 'Kontakt', to: '/contact', isContact: true },
+      { label: 'Kontakt', href: managerProfileUrl, external: true, isContact: true },
     ],
     language: {
       label: 'Sprache wählen',
@@ -109,7 +111,8 @@ export const de: Translation = {
       titleStart: 'Aus Fragen werden',
       titleAccent: 'Projekte.',
       action: 'Kontakt aufnehmen',
-      address: ['Institut für Data Science', 'HAW Kiel – Hochschule für Angewandte Wissenschaften', 'Grenzstraße 3', '24149 Kiel'],
+      externalLinkAriaLabel: 'Kontakt zu Prof. Dr.-Ing. Michael Prange (öffnet in einem neuen Tab)',
+      details: ['Prof. Dr.-Ing. Michael Prange', 'Telefon und E-Mail auf der HAW Kiel-Webseite'],
     },
   },
   projects: {
@@ -143,19 +146,6 @@ export const de: Translation = {
       { title: 'Profil', description: 'Ein Profil des Instituts wird ergänzt.' },
       { title: 'Team', description: 'Informationen zu den beteiligten Personen folgen.' },
     ],
-  },
-  contact: {
-    eyebrow: 'Kontakt',
-    title: 'Kontakt aufnehmen',
-    introduction: 'Kontaktinformationen und Hinweise werden ergänzt.',
-    formTitle: 'Nachricht vorbereiten',
-    nameLabel: 'Name',
-    emailLabel: 'E-Mail-Adresse',
-    messageLabel: 'Nachricht',
-    submissionNote: 'Der Versand wird zu einem späteren Zeitpunkt ergänzt.',
-    submitLabel: 'Versand folgt',
-    detailsTitle: 'Kontaktinformationen',
-    detailsDescription: 'Ansprechpersonen, Adresse und weitere Kontaktwege folgen.',
   },
   legal: {
     impressum: {

@@ -1,3 +1,4 @@
+import { managerProfileUrl } from '../content/managerProfile'
 import type { Translation } from './types'
 
 export const en: Translation = {
@@ -14,11 +15,12 @@ export const en: Translation = {
       homeAriaLabel: 'Institute for Data Science, home page',
     },
     navigationAriaLabel: 'Main navigation',
+    externalLinkAriaLabelSuffix: ' (opens in a new tab)',
     navigation: [
       { label: 'Institute', to: '/#institut' },
       { label: 'Projects', to: '/#projekte' },
       { label: 'Collaboration', to: '/#zusammenarbeit' },
-      { label: 'Contact', to: '/contact', isContact: true },
+      { label: 'Contact', href: managerProfileUrl, external: true, isContact: true },
     ],
     language: {
       label: 'Choose language',
@@ -109,7 +111,8 @@ export const en: Translation = {
       titleStart: 'Questions become',
       titleAccent: 'projects.',
       action: 'Get in touch',
-      address: ['Institute for Data Science', 'HAW Kiel – Kiel University of Applied Sciences', 'Grenzstraße 3', '24149 Kiel'],
+      externalLinkAriaLabel: 'Contact Professor Michael Prange (opens in a new tab)',
+      details: ['Prof. Dr.-Ing. Michael Prange', 'Telephone number and email on the HAW Kiel website'],
     },
   },
   projects: {
@@ -143,19 +146,6 @@ export const en: Translation = {
       { title: 'Profile', description: 'A profile of the institute will be added.' },
       { title: 'Team', description: 'Information about the people involved will follow.' },
     ],
-  },
-  contact: {
-    eyebrow: 'Contact',
-    title: 'Get in touch',
-    introduction: 'Contact information and guidance will be added.',
-    formTitle: 'Prepare a message',
-    nameLabel: 'Name',
-    emailLabel: 'Email address',
-    messageLabel: 'Message',
-    submissionNote: 'Sending will be added at a later stage.',
-    submitLabel: 'Sending to follow',
-    detailsTitle: 'Contact information',
-    detailsDescription: 'Contact people, address details and further ways to get in touch will follow.',
   },
   legal: {
     impressum: {

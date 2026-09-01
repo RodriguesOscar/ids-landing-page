@@ -1,10 +1,18 @@
 export type LanguageCode = 'de' | 'en'
 
-export type NavigationItem = {
-  isContact?: boolean
-  label: string
-  to: string
-}
+export type NavigationItem =
+  | {
+    external?: false
+    isContact?: boolean
+    label: string
+    to: string
+  }
+  | {
+    external: true
+    href: string
+    isContact?: boolean
+    label: string
+  }
 
 export type FooterItem = {
   label: string
@@ -54,19 +62,6 @@ export type Translation = {
     }[]
     title: string
   }
-  contact: {
-    detailsDescription: string
-    detailsTitle: string
-    emailLabel: string
-    eyebrow: string
-    formTitle: string
-    introduction: string
-    messageLabel: string
-    nameLabel: string
-    submissionNote: string
-    submitLabel: string
-    title: string
-  }
   documentTitle: string
   footer: {
     copyright: string
@@ -80,6 +75,7 @@ export type Translation = {
       name: string
       subline: string
     }
+    externalLinkAriaLabelSuffix: string
     language: {
       english: string
       englishAriaLabel: string
@@ -93,8 +89,9 @@ export type Translation = {
   home: {
     contact: {
       action: string
-      address: readonly string[]
+      details: readonly string[]
       eyebrow: string
+      externalLinkAriaLabel: string
       titleAccent: string
       titleStart: string
     }

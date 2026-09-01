@@ -18,6 +18,7 @@ type HeaderLanguage = {
 
 type HeaderProps = {
   brand: HeaderBrand
+  externalLinkAriaLabelSuffix: string
   navigationAriaLabel: string
   navigation: readonly NavigationItem[]
   language: HeaderLanguage
@@ -25,7 +26,7 @@ type HeaderProps = {
   onLanguageChange: (language: LanguageCode) => void
 }
 
-export function Header({ brand, navigationAriaLabel, navigation, language, languageCode, onLanguageChange }: HeaderProps) {
+export function Header({ brand, externalLinkAriaLabelSuffix, navigationAriaLabel, navigation, language, languageCode, onLanguageChange }: HeaderProps) {
   return (
     <header className="site-header">
       <nav className="nav shell" aria-label={navigationAriaLabel}>
@@ -38,11 +39,23 @@ export function Header({ brand, navigationAriaLabel, navigation, language, langu
         </Link>
         <div className="nav-actions">
           <ul className="nav-links">
-            {navigation.map(({ isContact, label, to }) => (
-              <li key={label}>
-                <Link className={isContact ? 'nav-contact' : undefined} to={to}>
-                  {label}
-                </Link>
+            {navigation.map((item) => (
+              <li key={item.label}>
+                {item.external ? (
+                  <a
+                    aria-label={`${item.label}${externalLinkAriaLabelSuffix}`}
+                    className={item.isContact ? 'nav-contact' : undefined}
+                    href={item.href}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link className={item.isContact ? 'nav-contact' : undefined} to={item.to}>
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
