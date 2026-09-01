@@ -1,0 +1,17 @@
+[
+  { "query": "Audit this route against WCAG 2.2 AA without changing it.", "should_trigger": true },
+  { "query": "Fix keyboard selection and focus restoration in this dialog.", "should_trigger": true },
+  { "query": "Make the chart and map values accessible without a pointer.", "should_trigger": true },
+  { "query": "Associate validation errors with their fields and recovery path.", "should_trigger": true },
+  { "query": "Verify zoom, reflow, contrast, and target sizes for this visible change.", "should_trigger": true },
+  { "query": "Add reduced-motion behavior and meaningful state announcements.", "should_trigger": true },
+  { "query": "Audit this public-sector web application against BITV 2.0 and EN 301 549 without changing it.", "should_trigger": true },
+  { "query": "Make the accessibility statement and feedback path reachable across this authority website.", "should_trigger": true },
+  { "query": "Check which manual accessibility tests remain after axe and Lighthouse pass.", "should_trigger": true },
+  { "query": "Rename a private service method.", "should_trigger": false },
+  { "query": "Correct an internal data aggregation with no UI change.", "should_trigger": false },
+  { "query": "Update API architecture documentation.", "should_trigger": false },
+  { "query": "Choose which statistical chart answers the question.", "should_trigger": false },
+  { "query": "Review a dependency update for security vulnerabilities.", "should_trigger": false },
+  { "query": "Change a build script without affecting rendered output.", "should_trigger": false }
+]

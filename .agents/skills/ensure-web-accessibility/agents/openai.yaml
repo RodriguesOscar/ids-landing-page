@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ensure Web Accessibility"
+  short_description: "Review or implement BITV and WCAG web accessibility"
+  default_prompt: "Use $ensure-web-accessibility to review or implement this public-sector web change against BITV 2.0, EN 301 549, and WCAG 2.2 AA."
