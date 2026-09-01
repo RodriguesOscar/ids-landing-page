@@ -14,7 +14,7 @@ export type FooterItem = {
 type ProjectCardCopy = {
   code: string
   description: string
-  id: 'reakt' | 'dpm' | 'kiLabor'
+  id: 'reakt' | 'dpm' | 'kiApplicationCentre'
   linkLabel: string
   title: string
 }
