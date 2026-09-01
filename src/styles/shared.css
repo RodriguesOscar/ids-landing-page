@@ -1,30 +1,30 @@
-.skip-link { position: fixed; z-index: 20; top: 12px; left: 12px; transform: translateY(-180%); padding: 10px 15px; background: var(--white); color: var(--ink); font-weight: 800; }
+.skip-link { position: fixed; z-index: 20; top: 12px; left: 12px; transform: translateY(-180%); padding: 10px 15px; background: var(--haw-blue); color: var(--white); font-weight: 700; }
 .skip-link:focus-visible { transform: translateY(0); }
-.shell { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
-.eyebrow { margin: 0 0 18px; color: var(--cyan); font: 500 .74rem/1.3 "DM Mono", monospace; letter-spacing: .13em; text-transform: uppercase; }
-.eyebrow.dark { color: var(--accent); }
+.shell { width: min(var(--max), calc(100% - 64px)); margin: 0 auto; }
+.eyebrow { margin: 0 0 18px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.eyebrow::after { content: ''; display: block; width: 52px; height: 3px; margin-top: 11px; background: var(--haw-blue); }
+.eyebrow.dark { color: var(--muted); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 21px; font-size: .86rem; font-weight: 800; transition: transform .2s ease, background .2s ease; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border: 1px solid var(--haw-blue); font-size: .95rem; font-weight: 700; transition: background .2s ease, color .2s ease, transform .2s ease; }
 .button:hover { transform: translateY(-2px); }
-.button-primary { background: var(--cyan); color: var(--ink); }
-.button-primary:hover { background: #33b6d8; }
-.button-secondary { border: 1px solid rgba(255,255,255,.38); color: var(--white); }
-.button-secondary:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
-.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--mist); border-left: 1px solid var(--mist); }
-.project-card { min-height: 285px; padding: 31px; border-right: 1px solid var(--mist); border-bottom: 1px solid var(--mist); background: transparent; transition: background .2s ease, color .2s ease; }
-.project-card:hover { background: var(--ink); color: var(--white); }
-.project-card-code { display: block; color: var(--accent); font: .7rem "DM Mono", monospace; }
-.project-card h3 { margin: 59px 0 15px; font-size: 1.47rem; letter-spacing: -.055em; }
-.project-card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.7; }
-.project-card:hover .project-card-code, .project-card:hover .project-card-link { color: var(--cyan); }
-.project-card:hover p { color: var(--hero-muted); }
-.project-card-link { display: inline-block; margin-top: 28px; color: var(--accent); font-weight: 800; font-size: .82rem; }
-.project-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.button-primary { background: var(--haw-blue); color: var(--white); }
+.button-primary:hover { background: #174b76; }
+.button-secondary { background: var(--white); color: var(--haw-blue); }
+.button-secondary:hover { background: var(--haw-blue-tint); }
+.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.project-card { display: flex; min-height: 340px; flex-direction: column; padding: 28px; border-top: 4px solid var(--haw-blue); background: var(--white); box-shadow: 0 1px 0 var(--mist); }
+.project-card-code { display: block; padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+.project-card h3 { margin: 26px 0 14px; color: var(--haw-blue); font-family: Bitter, serif; font-size: clamp(1.45rem, 2.2vw, 1.8rem); font-weight: 500; line-height: 1.13; }
+.project-card p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+.project-card-link { align-self: flex-start; margin-top: auto; padding-top: 24px; color: var(--haw-blue); font-weight: 700; }
+.project-card-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 980px) {
+  .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 760px) {
   .shell { width: min(100% - 36px, var(--max)); }
-  .project-grid { grid-template-columns: 1fr; }
-  .project-card { min-height: 225px; }
-  .project-card h3 { margin-top: 35px; }
-  .project-card:last-child:nth-child(odd) { grid-column: auto; }
+  .project-grid { grid-template-columns: 1fr; gap: 18px; }
+  .project-card { min-height: 0; padding: 24px; }
 }

@@ -4,15 +4,13 @@ import type { Translation } from './types'
 export const de: Translation = {
   documentTitle: 'Institut für Data Science - HAW Kiel',
   accessibility: {
-    dataVisualizationLabel: 'Datenvisualisierung als dekoratives Element',
     skipToMain: 'Zum Inhalt springen',
   },
   header: {
     brand: {
-      mark: 'IDS',
-      name: 'Institut für Data Science',
+      title: 'IDS – Institut für Data Science',
       subline: 'HAW Kiel',
-      homeAriaLabel: 'Institut für Data Science, Startseite',
+      homeAriaLabel: 'IDS – Institut für Data Science, Startseite',
     },
     navigationAriaLabel: 'Hauptnavigation',
     externalLinkAriaLabelSuffix: ' (öffnet in einem neuen Tab)',
@@ -40,24 +38,11 @@ export const de: Translation = {
   },
   home: {
     hero: {
-      eyebrow: 'Institut für Data Science · HAW Kiel',
-      titleStart: 'Aus Daten',
-      titleAccent: 'Wissen',
-      titleEnd: 'machen.',
-      titleSeparator: ' ',
+      eyebrow: 'HAW Kiel · Institut für Data Science',
+      title: 'Projekte des Instituts für Data Science',
       description: 'Willkommen am Institut für Data Science der Hochschule für Angewandte Wissenschaften Kiel. Wir verbinden Forschung und Transfer rund um Daten, Machine Learning und Künstliche Intelligenz – anwendungsnah und für den Norden.',
       primaryAction: 'Projektfelder ansehen',
       secondaryAction: 'Kontakt aufnehmen',
-      scrollLabel: 'Projekte ansehen',
-    },
-    dataCard: {
-      label: 'IDS / Projektarbeit',
-      status: 'Aktuell',
-      metrics: [
-        { value: 'Daten', label: 'analysieren' },
-        { value: 'Modelle', label: 'erproben' },
-        { value: 'Ergebnisse', label: 'einordnen' },
-      ],
     },
     institute: {
       label: 'Institut',
@@ -99,20 +84,19 @@ export const de: Translation = {
       ],
     },
     impact: {
-      visualLabel: 'Forschung × Anwendung × Zusammenarbeit',
-      visualStatement: 'Projekte entstehen im Austausch.',
       eyebrow: 'Zusammenarbeit',
       title: 'Wissenschaftliche Expertise für gemeinsame Vorhaben.',
       description: 'Wir arbeiten in Projekten mit Unternehmen, öffentlichen Einrichtungen und weiteren wissenschaftlichen Partnern zusammen. Dabei bringen wir Data-Science-Methoden in interdisziplinäre Teams ein und entwickeln Lösungen gemeinsam mit den jeweiligen Fachdomänen.',
       action: 'Ansprechpartner*innen kontaktieren',
+      imageAlt: 'Ein gemeinsamer Projektarbeitsplatz mit Laptop, Notizbüchern und Whiteboard.',
     },
     contact: {
       eyebrow: 'Kontakt',
-      titleStart: 'Aus Fragen werden',
+      titleLead: 'Aus Fragen werden',
       titleAccent: 'Projekte.',
       action: 'Kontakt aufnehmen',
       externalLinkAriaLabel: 'Kontakt zu Prof. Dr.-Ing. Michael Prange (öffnet in einem neuen Tab)',
-      details: ['Prof. Dr.-Ing. Michael Prange', 'Telefon und E-Mail auf der HAW Kiel-Webseite'],
+      details: ['Institut für Data Science', 'HAW Kiel – Hochschule für Angewandte Wissenschaften', 'Grenzstraße 3', '24149 Kiel'],
     },
   },
   projects: {

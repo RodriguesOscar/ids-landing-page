@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom'
 import type { LanguageCode, NavigationItem } from '../i18n/types'
 
 type HeaderBrand = {
-  mark: string
-  name: string
-  subline: string
   homeAriaLabel: string
+  subline: string
+  title: string
 }
 
 type HeaderLanguage = {
@@ -30,13 +29,10 @@ export function Header({ brand, externalLinkAriaLabelSuffix, navigationAriaLabel
   return (
     <header className="site-header">
       <nav className="nav shell" aria-label={navigationAriaLabel}>
-        <Link className="brand" to="/" aria-label={brand.homeAriaLabel}>
-          <span className="brand-mark">{brand.mark}</span>
-          <span className="brand-name">
-            {brand.name}
-            <small>{brand.subline}</small>
-          </span>
-        </Link>
+        <a className="brand-lockup" href="/" aria-label={brand.homeAriaLabel}>
+          <span>{brand.title}</span>
+          <small>{brand.subline}</small>
+        </a>
         <div className="nav-actions">
           <ul className="nav-links">
             {navigation.map((item) => (

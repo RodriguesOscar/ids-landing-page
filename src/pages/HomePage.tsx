@@ -2,30 +2,24 @@ import { ButtonLink } from '../components/ButtonLink'
 import { managerProfileUrl } from '../content/managerProfile'
 import { ProjectCard } from '../components/ProjectCard'
 import { homeProjectLinks } from '../content/projectLinks'
+import collaborationWorkshopImage from '../assets/collaboration-workshop.png'
 import { useLanguage } from '../i18n/LanguageContext'
 import './HomePage.css'
 
-const signalBars = Array.from({ length: 17 }, (_, index) => index)
-
 export function HomePage() {
   const { translation } = useLanguage()
-  const { hero, dataCard, institute, projects, impact, contact } = translation.home
+  const { hero, institute, projects, impact, contact } = translation.home
 
   return (
     <div className="home-page">
       <main id="main-content">
         <section className="hero" id="start" aria-labelledby="hero-title">
-          <div className="aurora aurora-one" aria-hidden="true" />
-          <div className="aurora aurora-two" aria-hidden="true" />
           <div className="hero-grid shell">
             <div>
               <p className="eyebrow">{hero.eyebrow}</p>
-              <h1 id="hero-title">
-                {hero.titleStart}
-                <br />
-                <span className="accent">{hero.titleAccent}</span>{hero.titleSeparator}{hero.titleEnd}
-              </h1>
+              <h1 id="hero-title">{hero.title}</h1>
               <p className="hero-copy">{hero.description}</p>
+              <span className="closing-rule" aria-hidden="true" />
               <div className="actions">
                 <ButtonLink href="#projekte" variant="primary">
                   {hero.primaryAction}
@@ -35,27 +29,7 @@ export function HomePage() {
                 </ButtonLink>
               </div>
             </div>
-            <aside className="data-card" aria-label={translation.accessibility.dataVisualizationLabel}>
-              <div className="card-top">
-                <span>{dataCard.label}</span>
-                <span className="status">{dataCard.status}</span>
-              </div>
-              <div className="signal" aria-hidden="true">
-                {signalBars.map((index) => (
-                  <i key={index} />
-                ))}
-              </div>
-              <div className="metrics">
-                {dataCard.metrics.map((metric) => (
-                  <div key={metric.value}>
-                    <b>{metric.value}</b>
-                    <span>{metric.label}</span>
-                  </div>
-                ))}
-              </div>
-            </aside>
           </div>
-          <span className="scroll-note">{hero.scrollLabel}</span>
         </section>
 
         <section id="institut">
@@ -95,10 +69,9 @@ export function HomePage() {
 
         <section className="impact" id="zusammenarbeit">
           <div className="shell impact-wrap">
-            <div className="impact-visual">
-              <p>{impact.visualLabel}</p>
-              <strong>{impact.visualStatement}</strong>
-            </div>
+            <figure className="impact-image">
+              <img src={collaborationWorkshopImage} alt={impact.imageAlt} />
+            </figure>
             <div className="impact-copy">
               <p className="eyebrow dark">{impact.eyebrow}</p>
               <h2>{impact.title}</h2>
@@ -121,8 +94,7 @@ export function HomePage() {
             <div>
               <p className="eyebrow">{contact.eyebrow}</p>
               <h2>
-                {contact.titleStart}
-                <br />
+                {contact.titleLead}{' '}
                 <em>{contact.titleAccent}</em>
               </h2>
               <div className="actions">

@@ -50,7 +50,6 @@ type LegalPageCopy = {
 
 export type Translation = {
   accessibility: {
-    dataVisualizationLabel: string
     skipToMain: string
   }
   about: {
@@ -71,9 +70,8 @@ export type Translation = {
   header: {
     brand: {
       homeAriaLabel: string
-      mark: string
-      name: string
       subline: string
+      title: string
     }
     externalLinkAriaLabelSuffix: string
     language: {
@@ -93,34 +91,21 @@ export type Translation = {
       eyebrow: string
       externalLinkAriaLabel: string
       titleAccent: string
-      titleStart: string
-    }
-    dataCard: {
-      label: string
-      metrics: readonly {
-        label: string
-        value: string
-      }[]
-      status: string
+      titleLead: string
     }
     hero: {
       description: string
       eyebrow: string
       primaryAction: string
-      scrollLabel: string
       secondaryAction: string
-      titleAccent: string
-      titleEnd: string
-      titleSeparator: string
-      titleStart: string
+      title: string
     }
     impact: {
       action: string
       description: string
       eyebrow: string
+      imageAlt: string
       title: string
-      visualLabel: string
-      visualStatement: string
     }
     institute: {
       eyebrow: string
