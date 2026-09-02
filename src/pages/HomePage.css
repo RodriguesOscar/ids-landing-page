@@ -1,5 +1,6 @@
 .hero { position: relative; isolation: isolate; overflow: hidden; border-bottom: 1px solid var(--mist); background: #00223f; color: var(--white); }
-.hero::before { content: ''; position: absolute; z-index: -2; inset: -3%; background: url('../assets/hero-campus.png') center 58% / cover no-repeat; filter: blur(1.5px) saturate(.8); transform: scale(1.07); }
+.hero-image { position: absolute; z-index: -2; inset: -3%; }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 58%; filter: blur(1.5px) saturate(.8); transform: scale(1.07); }
 .hero::after { content: ''; position: absolute; z-index: -1; inset: 0; background: rgb(0 34 63 / 68%); backdrop-filter: blur(1px); }
 .hero-grid { position: relative; z-index: 0; display: grid; min-height: 510px; align-content: center; padding: 88px 0 96px; }
 .hero h1 { max-width: 900px; margin: 0; font-family: Bitter, serif; font-size: clamp(3.2rem, 7vw, 6.4rem); font-weight: 500; letter-spacing: -.045em; line-height: .96; }
@@ -48,7 +49,7 @@
 .contact aside { border-left: 1px solid var(--line); padding-left: 28px; color: var(--muted); font-size: 1rem; line-height: 1.6; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .hero::before { animation: hero-image-drift 20s cubic-bezier(.45, .05, .2, 1) infinite alternate; }
+  .hero-image img { animation: hero-image-drift 20s cubic-bezier(.45, .05, .2, 1) infinite alternate; }
   .hero .eyebrow { animation: hero-content-reveal .58s cubic-bezier(.16, 1, .3, 1) both; }
   .hero h1 { animation: hero-content-reveal .65s .08s cubic-bezier(.16, 1, .3, 1) both; }
   .hero-copy { animation: hero-content-reveal .65s .16s cubic-bezier(.16, 1, .3, 1) both; }

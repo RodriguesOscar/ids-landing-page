@@ -2,7 +2,14 @@ import { ButtonLink } from '../components/ButtonLink'
 import { managerProfileUrl } from '../content/managerProfile'
 import { ProjectCard } from '../components/ProjectCard'
 import { homeProjectLinks } from '../content/projectLinks'
-import collaborationWorkshopImage from '../assets/collaboration-workshop.png'
+import collaborationWorkshopDesktopAvif from '../assets/optimized/collaboration-workshop-desktop.avif'
+import collaborationWorkshopDesktopWebp from '../assets/optimized/collaboration-workshop-desktop.webp'
+import collaborationWorkshopMobileAvif from '../assets/optimized/collaboration-workshop-mobile.avif'
+import collaborationWorkshopMobileWebp from '../assets/optimized/collaboration-workshop-mobile.webp'
+import heroCampusDesktopAvif from '../assets/optimized/hero-campus-desktop.avif'
+import heroCampusDesktopWebp from '../assets/optimized/hero-campus-desktop.webp'
+import heroCampusMobileAvif from '../assets/optimized/hero-campus-mobile.avif'
+import heroCampusMobileWebp from '../assets/optimized/hero-campus-mobile.webp'
 import { useLanguage } from '../i18n/LanguageContext'
 import './HomePage.css'
 
@@ -14,6 +21,12 @@ export function HomePage() {
     <div className="home-page">
       <main id="main-content" tabIndex={-1}>
         <section className="hero" id="start" aria-labelledby="hero-title" tabIndex={-1}>
+          <picture className="hero-image" aria-hidden="true">
+            <source media="(max-width: 760px)" srcSet={heroCampusMobileAvif} type="image/avif" />
+            <source srcSet={heroCampusDesktopAvif} type="image/avif" />
+            <source media="(max-width: 760px)" srcSet={heroCampusMobileWebp} type="image/webp" />
+            <img alt="" decoding="async" fetchPriority="high" height="941" src={heroCampusDesktopWebp} width="1672" />
+          </picture>
           <div className="hero-grid shell">
             <div>
               <p className="eyebrow">{hero.eyebrow}</p>
@@ -74,7 +87,12 @@ export function HomePage() {
         <section className="impact" id="zusammenarbeit" tabIndex={-1}>
           <div className="shell impact-wrap">
             <figure className="impact-image">
-              <img src={collaborationWorkshopImage} alt={impact.imageAlt} />
+              <picture>
+                <source media="(max-width: 760px)" srcSet={collaborationWorkshopMobileAvif} type="image/avif" />
+                <source srcSet={collaborationWorkshopDesktopAvif} type="image/avif" />
+                <source media="(max-width: 760px)" srcSet={collaborationWorkshopMobileWebp} type="image/webp" />
+                <img alt={impact.imageAlt} decoding="async" height="1024" loading="lazy" sizes="(max-width: 760px) calc(100vw - 36px), (max-width: 1280px) 40vw, 450px" src={collaborationWorkshopDesktopWebp} width="1536" />
+              </picture>
             </figure>
             <div className="impact-copy">
               <p className="eyebrow dark">{impact.eyebrow}</p>
