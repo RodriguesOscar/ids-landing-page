@@ -45,7 +45,10 @@ export const de: Translation = {
   home: {
     hero: {
       eyebrow: 'HAW Kiel · Institut für Data Science',
-      title: 'Projekte des Instituts für Data Science',
+      titleLead: 'Aus Daten',
+      titleAccent: 'Wissen',
+      titleEnd: 'machen.',
+      titleSeparator: ' ',
       description: 'Willkommen am Institut für Data Science der Hochschule für Angewandte Wissenschaften Kiel. Wir verbinden Forschung und Transfer rund um Daten, Machine Learning und Künstliche Intelligenz – anwendungsnah und für den Norden.',
       primaryAction: 'Projektfelder ansehen',
       secondaryAction: 'Kontakt aufnehmen',

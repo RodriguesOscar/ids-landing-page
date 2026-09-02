@@ -1,9 +1,11 @@
 ---
 name: ensure-web-accessibility
-description: Review or implement accessibility for user-facing web interfaces, especially explicit audits and changes to interactive controls, forms, dialogs, charts, maps, and responsive behavior. For German public-sector web work, apply BITV 2.0 and applicable EN 301 549 requirements through a WCAG 2.2 Level AA web baseline. A review or audit is read-only unless remediation is explicitly requested.
+description: Explicit-only accessibility audit and remediation workflow for user-facing web interfaces. Invoke it with $ensure-web-accessibility for WCAG, BITV, EN 301 549, keyboard, focus, responsive, or assistive-technology work.
 ---
 
 # Ensure Web Accessibility
+
+Use this skill only when the user explicitly invokes `$ensure-web-accessibility`. Do not apply it implicitly because a task changes UI, layout, content, or ordinary web code.
 
 For German public-sector websites and web applications, use this compliance chain:
 
@@ -39,7 +41,7 @@ conformance.
    tooling when the application is runnable; evidence does not grant repair authority.
 6. In implementation mode, add the smallest semantic or behavioral regression. Use browser testing
    when accessibility acceptance depends on real browser behavior. In this project, follow the
-   [validation requirements](../../../docs/UX-CONTRACT.md#validation), including the documented
+   [verification requirements](../../../docs/UX-CONTRACT.md#verification), including the documented
    desktop and narrow viewport checks where applicable.
 7. Report automated coverage limits, manual verification still needed, and organizational/content
    duties outside the changed frontend scope.

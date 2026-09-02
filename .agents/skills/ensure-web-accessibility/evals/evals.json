@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Audit the shared combobox against WCAG 2.2 AA and do not modify files.",
+      "prompt": "Use $ensure-web-accessibility to audit the shared combobox against WCAG 2.2 AA and do not modify files.",
       "expected_output": "A read-only findings report covering name, role, state, keyboard, focus, errors, zoom/reflow, and evidence limits.",
       "assertions": [
         "No remediation is implemented",
@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "prompt": "Fix a modal that loses focus after closing and permits keyboard focus behind it while open.",
+      "prompt": "Use $ensure-web-accessibility to fix a modal that loses focus after closing and permits keyboard focus behind it while open.",
       "expected_output": "A semantic modal correction with initial focus, containment, dismissal, restoration, regression coverage, and browser verification.",
       "assertions": [
         "Focus containment and restoration are both covered",
@@ -25,7 +25,7 @@
     },
     {
       "id": 3,
-      "prompt": "Make a chart accessible when its tooltip is pointer-only and suppressed values appear as gaps.",
+      "prompt": "Use $ensure-web-accessibility to make a chart accessible when its tooltip is pointer-only and suppressed values appear as gaps.",
       "expected_output": "An accessible chart solution with description, keyboard-independent exact values, units, and distinct missing/disclosure states.",
       "assertions": [
         "A semantic table or equivalent exact-value surface is provided",
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "prompt": "Review a form that shows validation errors visually after submit but does not associate them with fields or move focus to the failures.",
+      "prompt": "Use $ensure-web-accessibility to review a form that shows validation errors visually after submit but does not associate them with fields or move focus to the failures.",
       "expected_output": "A findings-led review covering field association, invalid state, error discovery, focus, preservation, and recovery.",
       "assertions": [
         "Field and summary error behavior are considered",
@@ -47,7 +47,7 @@
     },
     {
       "id": 5,
-      "prompt": "Implement an animated expanding panel and a live status counter that updates every second.",
+      "prompt": "Use $ensure-web-accessibility to implement an animated expanding panel and a live status counter that updates every second.",
       "expected_output": "A solution respecting reduced motion and avoiding noisy live-region announcements while preserving meaningful state.",
       "assertions": [
         "Reduced-motion behavior is defined",
@@ -58,7 +58,7 @@
     },
     {
       "id": 6,
-      "prompt": "Audit this federal public-sector web application against BITV 2.0. Axe reports no violations; do not modify files.",
+      "prompt": "Use $ensure-web-accessibility to audit this federal public-sector web application against BITV 2.0. Axe reports no violations; do not modify files.",
       "expected_output": "A read-only BITV/EN/WCAG findings report that treats the automated pass as limited evidence and identifies the manual and organizational checks still required.",
       "assertions": [
         "The BITV 2.0 and applicable EN 301 549 web context is identified",
@@ -69,7 +69,7 @@
     },
     {
       "id": 7,
-      "prompt": "The public authority's homepage has no Easy German or German Sign Language explanations and the accessibility statement is unreachable from most pages. What must change?",
+      "prompt": "Use $ensure-web-accessibility: the public authority's homepage has no Easy German or German Sign Language explanations and the accessibility statement is unreachable from most pages. What must change?",
       "expected_output": "A BITV-specific finding separating implementable discoverability and semantic-link work from the authority's content, legal statement, feedback-process, and sign-language production responsibilities.",
       "assertions": [
         "BITV-specific homepage and accessibility-statement duties are recognized",

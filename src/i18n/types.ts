@@ -104,7 +104,10 @@ export type Translation = {
       eyebrow: string
       primaryAction: string
       secondaryAction: string
-      title: string
+      titleAccent: string
+      titleEnd: string
+      titleLead: string
+      titleSeparator: string
     }
     impact: {
       action: string

@@ -17,7 +17,11 @@ export function HomePage() {
           <div className="hero-grid shell">
             <div>
               <p className="eyebrow">{hero.eyebrow}</p>
-              <h1 id="hero-title">{hero.title}</h1>
+              <h1 id="hero-title">
+                {hero.titleLead}
+                <br />
+                <span className="accent">{hero.titleAccent}</span>{hero.titleSeparator}{hero.titleEnd}
+              </h1>
               <p className="hero-copy">{hero.description}</p>
               <span className="closing-rule" aria-hidden="true" />
               <div className="actions">
