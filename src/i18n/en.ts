@@ -8,9 +8,9 @@ export const en: Translation = {
   },
   header: {
     brand: {
-      title: 'IDS – Institute for Data Science',
+      title: 'IfDS – Institute for Data Science',
       subline: 'HAW Kiel',
-      homeAriaLabel: 'IDS – Institute for Data Science, home page',
+      homeAriaLabel: 'IfDS – Institute for Data Science, home page',
     },
     navigationAriaLabel: 'Main navigation',
     externalLinkAriaLabelSuffix: ' (opens in a new tab)',
@@ -49,7 +49,7 @@ export const en: Translation = {
       titleAccent: 'into knowledge',
       titleEnd: '.',
       titleSeparator: '',
-      description: 'Welcome to the Institute for Data Science at Kiel University of Applied Sciences. We connect research and knowledge transfer around data, machine learning and artificial intelligence – with practical relevance for northern Germany.',
+      description: 'Welcome to IfDS – Institute for Data Science at HAW Kiel – University of Applied Sciences. We connect research and knowledge transfer around data, machine learning and artificial intelligence – with practical relevance for northern Germany.',
       primaryAction: 'Explore project areas',
       secondaryAction: 'Get in touch',
     },
@@ -58,12 +58,12 @@ export const en: Translation = {
       eyebrow: 'Institute for Data Science',
       title: 'Research and knowledge transfer with data.',
       paragraphs: [
-        'Researchers at the Institute for Data Science at HAW Kiel work on data-driven questions. The focus is on data analysis, statistical modelling, machine learning and artificial intelligence.',
+        'Researchers at IfDS – Institute for Data Science at HAW Kiel – University of Applied Sciences work on data-driven questions. The focus is on data analysis, statistical modelling, machine learning and artificial intelligence.',
         'Projects emerge through collaboration with different departments and external partners. We connect methodological research with specific applications.',
       ],
     },
     projects: {
-      eyebrow: 'Project work at IDS',
+      eyebrow: 'Project work at IfDS',
       title: 'Our projects',
       description: 'From the initial idea to practical use: our projects make data science tangible.',
       externalLinkAriaLabelPrefix: 'More information about ',

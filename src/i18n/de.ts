@@ -8,9 +8,9 @@ export const de: Translation = {
   },
   header: {
     brand: {
-      title: 'IDS – Institut für Data Science',
+      title: 'IfDS – Institut für Data Science',
       subline: 'HAW Kiel',
-      homeAriaLabel: 'IDS – Institut für Data Science, Startseite',
+      homeAriaLabel: 'IfDS – Institut für Data Science, Startseite',
     },
     navigationAriaLabel: 'Hauptnavigation',
     externalLinkAriaLabelSuffix: ' (öffnet in einem neuen Tab)',
@@ -49,7 +49,7 @@ export const de: Translation = {
       titleAccent: 'Wissen',
       titleEnd: 'machen.',
       titleSeparator: ' ',
-      description: 'Willkommen am Institut für Data Science der Hochschule für Angewandte Wissenschaften Kiel. Wir verbinden Forschung und Transfer rund um Daten, Machine Learning und Künstliche Intelligenz – anwendungsnah und für den Norden.',
+      description: 'Willkommen am IfDS – Institut für Data Science der HAW Kiel – Hochschule für Angewandte Wissenschaften. Wir verbinden Forschung und Transfer rund um Daten, Machine Learning und Künstliche Intelligenz – anwendungsnah und für den Norden.',
       primaryAction: 'Projektfelder ansehen',
       secondaryAction: 'Kontakt aufnehmen',
     },
@@ -58,12 +58,12 @@ export const de: Translation = {
       eyebrow: 'Institut für Data Science',
       title: 'Forschung und Transfer mit Daten.',
       paragraphs: [
-        'Am Institut für Data Science arbeiten Wissenschaftler*innen der HAW Kiel an datengetriebenen Fragestellungen. Im Mittelpunkt stehen Datenanalyse, statistische Modellierung, maschinelles Lernen und Künstliche Intelligenz.',
+        'Am IfDS – Institut für Data Science der HAW Kiel – Hochschule für Angewandte Wissenschaften arbeiten Wissenschaftler*innen an datengetriebenen Fragestellungen. Im Mittelpunkt stehen Datenanalyse, statistische Modellierung, maschinelles Lernen und Künstliche Intelligenz.',
         'Die Projekte entstehen in Zusammenarbeit mit unterschiedlichen Fachbereichen und externen Partnern. Dabei verbinden wir methodische Forschung mit konkreten Anwendungsfällen.',
       ],
     },
     projects: {
-      eyebrow: 'Projektarbeit am IDS',
+      eyebrow: 'Projektarbeit am IfDS',
       title: 'Unsere Projekte',
       description: 'Von der ersten Idee bis zur Anwendung: Unsere Projekte machen Data Science konkret.',
       externalLinkAriaLabelPrefix: 'Weitere Informationen zu ',
