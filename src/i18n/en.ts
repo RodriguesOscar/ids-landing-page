@@ -2,7 +2,7 @@ import { managerProfileUrl } from '../content/managerProfile'
 import type { Translation } from './types'
 
 export const en: Translation = {
-  documentTitle: 'Institut für Data Science - HAW Kiel',
+  documentTitle: 'IfDS - Institut für Data Science',
   accessibility: {
     skipToMain: 'Skip to content',
   },
@@ -73,14 +73,14 @@ export const en: Translation = {
           id: 'reakt',
           code: '01 / REAKT',
           title: 'Rail transport in rural areas',
-          description: 'REAKT is a transdisciplinary initiative from Schleswig-Holstein. Partners from research and industry develop solutions in research and development projects to make rail transport more individual, attractive, safe and economically viable.',
+          description: 'The REAKT knowledge platform brings together concepts, methods, technologies and results for reactivating rail lines in rural areas. It supports the REAKT community in making rail transport more individual, attractive, safe and economically viable.',
           linkLabel: 'More about the project →',
         },
         {
           id: 'dpm',
           code: '02 / DPM',
           title: 'Digitales Besuchermanagement 2.0',
-          description: 'DPM is advancing digital visitor management in Schleswig-Holstein. The project develops approaches that make data from sensors, forecasting models and open sources useful for tourism stakeholders.',
+          description: 'The Tourism Data Monitor Schleswig-Holstein makes visitor-frequency, tourism and contextual data available for visitor management. It helps users explore time series, indicators and spatial and temporal relationships.',
           linkLabel: 'More about the project →',
         },
         {

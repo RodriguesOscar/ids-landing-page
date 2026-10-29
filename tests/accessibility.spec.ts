@@ -22,10 +22,25 @@ for (const language of ['de', 'en'] as const) {
 
 test('switches the document language and preserves an exposed selected state', async ({ page }) => {
   await page.goto('/')
+  await expect(page).toHaveTitle('IfDS - Institut für Data Science')
   await page.getByRole('button', { name: 'Englisch auswählen' }).click()
 
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
+  await expect(page).toHaveTitle('IfDS - Institut für Data Science')
   await expect(page.getByRole('button', { name: 'Select English' })).toHaveAttribute('aria-pressed', 'true')
+})
+
+test('links the REAKT and DPM project cards to their current project sites in both languages', async ({ page }) => {
+  for (const language of ['de', 'en'] as const) {
+    await page.goto('/')
+
+    if (language === 'en') {
+      await page.getByRole('button', { name: 'Englisch auswählen' }).click()
+    }
+
+    await expect(page.locator('a[href="https://reakt.ids-kiel.de/reakt"]')).toHaveAttribute('target', '_blank')
+    await expect(page.locator('a[href="https://dpm.ids-kiel.de/home"]')).toHaveAttribute('target', '_blank')
+  }
 })
 
 test('moves focus to main content from the skip link', async ({ page }) => {

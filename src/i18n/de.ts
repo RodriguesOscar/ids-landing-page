@@ -2,7 +2,7 @@ import { managerProfileUrl } from '../content/managerProfile'
 import type { Translation } from './types'
 
 export const de: Translation = {
-  documentTitle: 'Institut für Data Science - HAW Kiel',
+  documentTitle: 'IfDS - Institut für Data Science',
   accessibility: {
     skipToMain: 'Zum Inhalt springen',
   },
@@ -73,14 +73,14 @@ export const de: Translation = {
           id: 'reakt',
           code: '01 / REAKT',
           title: 'Schienenverkehr im ländlichen Raum',
-          description: 'REAKT ist eine transdisziplinäre Initiative aus Schleswig-Holstein. Partner aus Wissenschaft und Wirtschaft entwickeln in FuE-Projekten Lösungen, um Schienenverkehr individueller, attraktiver, sicherer und wirtschaftlicher zu gestalten.',
+          description: 'Die REAKT Wissensplattform bündelt Konzepte, Methoden, Technologien und Ergebnisse für die Reaktivierung von Bahnstrecken im ländlichen Raum. Sie unterstützt die REAKT Community dabei, Schienenverkehr individueller, attraktiver, sicherer und wirtschaftlicher zu gestalten.',
           linkLabel: 'Mehr zum Projekt →',
         },
         {
           id: 'dpm',
           code: '02 / DPM',
           title: 'Digitales Besuchermanagement 2.0',
-          description: 'DPM entwickelt digitales Besuchermanagement in Schleswig-Holstein weiter. Im Projekt entstehen unter anderem Ansätze, um Daten aus Sensorik, Prognosemodellen und offenen Quellen für touristische Akteure nutzbar zu machen.',
+          description: 'Der Tourismdatenmonitor Schleswig-Holstein macht Besucherfrequenz-, Tourismus- und Rahmendaten für das Besuchermanagement zugänglich. Er hilft, Messreihen, Kennzahlen und räumlich-zeitliche Zusammenhänge zu erkunden.',
           linkLabel: 'Mehr zum Projekt →',
         },
         {
